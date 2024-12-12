@@ -1,20 +1,14 @@
 import java.util.*;
-interface printable
+interface Math
 {
-
+    public int operation(int a,int b);
 }
-class h implements printable{
-    public void print()
-    {
-        System.out.println("hello students");
-    }
-}
-public class Main 
-{
+public class Main{
     public static void main(String args[])
     {
-        h f=new h();
-        f.print();
+        Math add=(a,b)->a+b;
+        Math sub=(a,b)->a-b;
+        System.out.println(add.operation(4,5));
+        System.out.println(sub.operation(9,7));
     }
 }
-
